@@ -73,9 +73,11 @@ const CertificateImage = styled.img`
   transition: transform 0.3s ease;
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  
 
   &:hover {
-    transform: scale(2.2);
+    transform: scale(2);
+    margin-top: 2rem;
   }
 `;
 

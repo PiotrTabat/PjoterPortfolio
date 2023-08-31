@@ -36,19 +36,19 @@ const ProjectTile = styled.div`
   justify-content: center;
   margin: 2rem 0;
 
-  &:nth-child(3) { 
+  &:nth-child(3) {
     align-self: flex-start;
   }
 
-  &:nth-child(4) { 
+  &:nth-child(4) {
     align-self: flex-end;
   }
 
-  &:nth-child(5) { 
+  &:nth-child(5) {
     align-self: flex-start;
   }
 
-  &:nth-child(6) { 
+  &:nth-child(6) {
     align-self: flex-end;
   }
 `;

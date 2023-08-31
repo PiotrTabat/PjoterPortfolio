@@ -51,7 +51,7 @@ const SubTitle = styled.p`
 
 const SubTitle2 = styled.p`
   font-size: 1.5rem;
-    font-weight: bold;
+  font-weight: bold;
   margin: 0 0 2rem -1rem;
   text-align: center;
 `;
@@ -82,7 +82,7 @@ const Home = () => {
     return (
         <HomeContainer>
             <ImageContainer>
-                <Image src={homeImage} alt="Home"/>
+                <Image src={homeImage} alt="Developer Image"/>
             </ImageContainer>
             <TextContainer>
                 <Title>Full-Stack Developer</Title>
