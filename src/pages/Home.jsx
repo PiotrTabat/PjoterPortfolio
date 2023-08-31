@@ -82,7 +82,7 @@ const Home = () => {
     return (
         <HomeContainer>
             <ImageContainer>
-                <Image src={homeImage} alt="Developer Image"/>
+                <Image src={homeImage} loading={"lazy"} alt="Developer Image"/>
             </ImageContainer>
             <TextContainer>
                 <Title>Full-Stack Developer</Title>

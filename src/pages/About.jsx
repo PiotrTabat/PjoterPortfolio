@@ -117,7 +117,7 @@ const About = () => {
                     worked on a project using the SCRUM methodology with Trello.
                 </Text>
                 <Text>
-                    Outside the world of coding, I've been working a medical rescuer in the National
+                    Outside the world of coding, I've been working as a paramedic in the National
                     Medical Rescue Team. This role has taught me many valuable skills like teamwork, stress management,
                     and quick decision-making, which also find application in the programming world.
                 </Text>

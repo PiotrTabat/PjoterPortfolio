@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const Header = styled.header`
   background-color: white;
@@ -7,7 +8,7 @@ const Header = styled.header`
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 `;
 
 const Container = styled.div`
@@ -37,7 +38,11 @@ const Button = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+
+  &:active {
+    opacity: 0.2; 
+  }
 `;
 
 const MobileMenuButton = styled(Button)`
@@ -48,17 +53,30 @@ const MobileMenuButton = styled(Button)`
 
 const MobileMenu = styled.div`
   position: fixed;
-  top: 0;
+  top: 30px;
   right: 0;
   width: 200px;
-  height: 30vh;
+  height: auto;
   background-color: white;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.3s ease-in-out;
+`;
+
+const StyledLink = styled(Link)`
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+
+  &:active {
+    opacity: 0.2;
+  }
 `;
 
 const Nav = () => {
@@ -70,10 +88,10 @@ const Nav = () => {
                 <Container>
                     <Logo>T-Bat.dev</Logo>
                     <NavLinks>
-                        <Button>Home</Button>
-                        <Button>About</Button>
-                        <Button>Projects</Button>
-                        <Button>Contact</Button>
+                        <StyledLink to="home" smooth={true} duration={500}>Home</StyledLink>
+                        <StyledLink to="about" smooth={true} duration={500}>About</StyledLink>
+                        <StyledLink to="projects" smooth={true} duration={500}>Projects</StyledLink>
+                        <StyledLink to="contact" smooth={true} duration={500}>Contact</StyledLink>
                     </NavLinks>
                     <MobileMenuButton onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
                         ☰
@@ -82,10 +100,10 @@ const Nav = () => {
             </Header>
             <MobileMenu isOpen={isMobileMenuOpen}>
                 <Button onClick={() => setMobileMenuOpen(false)}>Close</Button>
-                <Button>Home</Button>
-                <Button>About</Button>
-                <Button>Projects</Button>
-                <Button>Contact</Button>
+                <StyledLink to="home" smooth={true} duration={500}>Home</StyledLink>
+                <StyledLink to="about" smooth={true} duration={500}>About</StyledLink>
+                <StyledLink to="projects" smooth={true} duration={500}>Projects</StyledLink>
+                <StyledLink to="contact" smooth={true} duration={500}>Contact</StyledLink>
             </MobileMenu>
         </>
     );
