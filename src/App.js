@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './components/Nav';
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
 
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
         <Nav />
           <Home />
           <About />
+          <Projects />
         {}
       </>
   );

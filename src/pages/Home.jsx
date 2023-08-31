@@ -37,27 +37,34 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  color: #cb1515;
   margin-bottom: 4rem;
   text-align: center;
 `;
 
 const SubTitle = styled.p`
-  font-size: 1.5rem;
-  margin-left: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+`;
 
+const SubTitle2 = styled.p`
+  font-size: 1.5rem;
+    font-weight: bold;
+  margin: 0 0 2rem -1rem;
+  text-align: center;
 `;
 
 const PinIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   color: #cb1515;
 `;
 
 const GithubIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
-  margin-left: 1.5rem;
+  margin-left: 5rem;
   font-size: 2.5rem;
   margin-top: 2rem;
 `;
@@ -80,7 +87,10 @@ const Home = () => {
             <TextContainer>
                 <Title>Full-Stack Developer</Title>
                 <SubTitle>
-                    Hi, I'm Piotr Tabat. I'm a Full-Stack Developer living in Radzymin, Poland.
+                    <SubTitle2>
+                        Hi, I'm Piotr Tabat.
+                    </SubTitle2>
+                    I'm a Full-Stack Developer living in Radzymin, Poland.
                     <PinIcon icon={faMapPin} onClick={openMap}/>
                 </SubTitle>
                 <GithubIcon icon={faGithub} onClick={openGithub}/>

@@ -42,14 +42,13 @@ const TextSection = styled.div`
 const Title = styled.h2`
   font-size: 3rem;
   font-weight: 700;
+  color: #4040f5;
   margin-bottom: 2rem;
-  color: #2c2c2c;
   text-align: center;
 `;
 
 const Text = styled.p`
   font-size: 18px;
-  color: #2C2C2CFF;
   word-wrap: break-word;
 `;
 
