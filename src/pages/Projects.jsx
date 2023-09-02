@@ -6,7 +6,7 @@ const ProductsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding: 4rem;
 `;
 
@@ -25,32 +25,23 @@ const Subtitle = styled.p`
   margin-bottom: 2rem;
 `;
 
+const TilesContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap;
+`;
+
 const ProjectTile = styled.div`
+  flex: 1;
   height: 60vh;
-  width: 80%;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0;
-
-  &:nth-child(3) {
-    align-self: flex-start;
-  }
-
-  &:nth-child(4) {
-    align-self: flex-end;
-  }
-
-  &:nth-child(5) {
-    align-self: flex-start;
-  }
-
-  &:nth-child(6) {
-    align-self: flex-end;
-  }
+  margin: 0 1rem;
 `;
 
 const Products = () => {
@@ -58,10 +49,12 @@ const Products = () => {
         <ProductsContainer>
             <Title>Projects</Title>
             <Subtitle>Each project is another element of my education and development.</Subtitle>
-            <ProjectTile>Kalkulator</ProjectTile>
-            <ProjectTile>Best Shop</ProjectTile>
-            <ProjectTile>Oddam w dobre ręce</ProjectTile>
-            <ProjectTile>Wycieczki kosmiczne</ProjectTile>
+            <TilesContainer>
+                <ProjectTile>Kalkulator</ProjectTile>
+                <ProjectTile>Best Shop</ProjectTile>
+                <ProjectTile>Oddam w dobre ręce</ProjectTile>
+                <ProjectTile>Wycieczki kosmiczne</ProjectTile>
+            </TilesContainer>
         </ProductsContainer>
     );
 };

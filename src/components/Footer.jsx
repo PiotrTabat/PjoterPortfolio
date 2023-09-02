@@ -17,7 +17,7 @@ const FooterContainer = styled.div`;
 
 const CopyrightText = styled.p`
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   
     @media (max-width: 768px) {
         font-size: 1rem;
@@ -25,7 +25,7 @@ const CopyrightText = styled.p`
 `;
 
 const GithubIcon = styled.img`
-  width: 40px; 
+  width: 35px; 
   height: auto;
   border-radius: 25px;
 `;

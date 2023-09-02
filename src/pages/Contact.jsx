@@ -33,8 +33,8 @@ const Subtitle = styled.p`
   margin-bottom: 1rem;
 
   @media (min-width: 768px) {
-    font-size: 1.7rem;
-    width: 80%;
+    font-size: 1.2rem;
+    width: 60%;
   }
 `;
 
