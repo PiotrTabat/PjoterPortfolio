@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import githubIcon from '../assets/Github-Icon.png';
+import githubIconImage from '../assets/Github-Icon.png';
+import linkedInIconImage from '../assets/LinkedIn-Icon.png';
 
-const FooterContainer = styled.div`;
+const FooterContainer = styled.div`
   min-height: 10vh;
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
@@ -16,27 +17,60 @@ const FooterContainer = styled.div`;
 `;
 
 const CopyrightText = styled.p`
-  margin: 0;
+  margin-left: 1rem;
   font-size: 1rem;
-  
-    @media (max-width: 768px) {
-        font-size: 1rem;
-    }
+  flex-shrink: 0;
+
+  @media (min-width: 769px) {
+    margin-left: 6rem;
+  }
 `;
 
-const GithubIcon = styled.img`
-  width: 35px; 
+const IconsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+
+  @media (min-width: 769px) {
+    margin-right: 6rem;
+  }
+`;
+
+const IconBase = styled.img`
+  width: 35px;
   height: auto;
+  margin-right: 1rem;
+`;
+
+const GithubIcon = styled(IconBase)`
   border-radius: 25px;
 `;
+
+const LinkedInIcon = styled(IconBase)`
+    background-color: white;
+    border-radius: 5px;
+`;
+
 
 const Footer = () => {
     return (
         <FooterContainer>
             <CopyrightText>Copyright © 2023 by Piotr Tabat</CopyrightText>
-            <a href="https://github.com/PiotrTabat" target="_blank" rel="noopener noreferrer">
-                <GithubIcon src={githubIcon} alt="Github Icon" />
-            </a>
+            <IconsContainer>
+                <a href="https://github.com/PiotrTabat"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Link to Piotr Tabat's Github profile">
+                    <GithubIcon src={githubIconImage} alt="Github Icon"/>
+                </a>
+                <a href="https://www.linkedin.com/in/piotr-tabat-6b8b0428b/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Link to Piotr Tabat's LinkedIn profile">
+                    <LinkedInIcon src={linkedInIconImage} alt="LinkedIn Icon"/>
+                </a>
+            </IconsContainer>
         </FooterContainer>
     );
 };

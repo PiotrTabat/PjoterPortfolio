@@ -39,6 +39,7 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
+  
 
   &:active {
     opacity: 0.2; 

@@ -1,9 +1,9 @@
 import React from 'react';
 import Nav from './components/Nav';
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 
 
