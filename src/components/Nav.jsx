@@ -65,6 +65,7 @@ const MobileMenu = styled.div`
   gap: 2rem;
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.3s ease-in-out;
+  z-index: 1;
 `;
 
 const StyledLink = styled(Link)`

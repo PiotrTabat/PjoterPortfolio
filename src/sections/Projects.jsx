@@ -55,9 +55,11 @@ const TilesContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   flex-wrap: nowrap;
+  text-align: center;
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
   }
 `;
@@ -74,8 +76,9 @@ const ProjectTile = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
     margin: 1rem 0;
+    height: auto;
   }
 `;
 
@@ -140,10 +143,30 @@ const LiveDemoButton = styled.button`
 `;
 
 const projectData = [
-    { image: kalkulatorImage, alt: "Project Kalkulator", description: "Opis projektu Kalkulator" },
-    { image: bestShopImage, alt: "Project BestShop", description: "Opis projektu BestShop" },
-    { image: oddamWDobreReceImage, alt: "Project Oddam w Dobre Rece", description: "Opis projektu Oddam w Dobre Rece" },
-    { image: wycieczkiImage, alt: "Project Wycieczki Kosmiczne", description: "Opis projektu Wycieczki Kosmiczne" },
+    {
+        image: kalkulatorImage,
+        alt: "Project Kalkulator",
+        description: "Just first application. Used technologies HTML, CSS, JavaScript.",
+        link: "http://www.t-bat.pl/kalkulator"
+    },
+    {
+        image: bestShopImage,
+        alt: "Project BestShop",
+        description: "My first workshop at school. Used technologies HTML, CSS, SCSS.",
+        link: "#"
+    },
+    {
+        image: oddamWDobreReceImage,
+        alt: "Project Oddam w Dobre Rece",
+        description: "My first React workshop. Used technologies React, React-Router.",
+        link: "#"
+    },
+    {
+        image: wycieczkiImage,
+        alt: "Project Wycieczki Kosmiczne",
+        description: "My first ever application made from scratch including both frontend and backend.",
+        link: "#"
+    },
 ];
 
 const Products = () => {
@@ -159,7 +182,14 @@ const Products = () => {
                         </ImageContainer>
                         <DescriptionContainer>
                             <Description>{project.description}</Description>
-                            <LiveDemoButton>Live Demo</LiveDemoButton>
+                            <LiveDemoButton
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => window.open(project.link, '_blank')}
+                            >
+                                Live Demo
+                            </LiveDemoButton>
                         </DescriptionContainer>
                     </ProjectTile>
                 ))}
