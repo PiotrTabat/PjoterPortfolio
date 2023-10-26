@@ -153,7 +153,7 @@ const projectData = [
         image: bestShopImage,
         alt: "Project BestShop",
         description: "My first workshop at school. Used technologies HTML, CSS, SCSS.",
-        link: "#"
+        link: "http://www.t-bat.pl/bestshop"
     },
     {
         image: oddamWDobreReceImage,
