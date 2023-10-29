@@ -159,13 +159,13 @@ const projectData = [
         image: oddamWDobreReceImage,
         alt: "Project Oddam w Dobre Rece",
         description: "My first React workshop. Used technologies React, React-Router.",
-        link: "#"
+        link: "http://www.t-bat.pl/oddam"
     },
     {
         image: wycieczkiImage,
         alt: "Project Wycieczki Kosmiczne",
         description: "My first ever application made from scratch including both frontend and backend.",
-        link: "#"
+        link: "http://www.t-bat.pl/wycieczki-kosmiczne"
     },
 ];
 
