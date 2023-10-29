@@ -63,7 +63,7 @@ const MobileMenu = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+  transform: ${({ $isOpen }) => ($isOpen ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.3s ease-in-out;
   z-index: 1;
 `;
@@ -104,7 +104,7 @@ const Nav = () => {
                     </MobileMenuButton>
                 </Container>
             </Header>
-            <MobileMenu isOpen={isMobileMenuOpen}>
+            <MobileMenu $isOpen={isMobileMenuOpen}>
                 <Button onClick={() => setMobileMenuOpen(false)}>Close</Button>
                 <StyledLink to="home" smooth={true} duration={500} onClick={handleLinkClick}>Home</StyledLink>
                 <StyledLink to="about" smooth={true} duration={500} onClick={handleLinkClick}>About</StyledLink>

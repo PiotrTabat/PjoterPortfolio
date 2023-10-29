@@ -68,12 +68,12 @@ const Title = styled.h1`
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 `;
 
-const SubTitle = styled.p`
+const SubTitle = styled.div`
   font-size: 1.2rem;
   text-align: center;
 `;
 
-const SubTitle2 = styled.p`
+const SubTitle2 = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
