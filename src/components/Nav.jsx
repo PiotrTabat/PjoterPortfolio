@@ -84,6 +84,10 @@ const StyledLink = styled(Link)`
 const Nav = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+    const handleLinkClick = () => {
+        setMobileMenuOpen(false);
+    };
+
     return (
         <>
             <Header>
@@ -102,10 +106,10 @@ const Nav = () => {
             </Header>
             <MobileMenu isOpen={isMobileMenuOpen}>
                 <Button onClick={() => setMobileMenuOpen(false)}>Close</Button>
-                <StyledLink to="home" smooth={true} duration={500}>Home</StyledLink>
-                <StyledLink to="about" smooth={true} duration={500}>About</StyledLink>
-                <StyledLink to="projects" smooth={true} duration={500}>Projects</StyledLink>
-                <StyledLink to="contact" smooth={true} duration={500}>Contact</StyledLink>
+                <StyledLink to="home" smooth={true} duration={500} onClick={handleLinkClick}>Home</StyledLink>
+                <StyledLink to="about" smooth={true} duration={500} onClick={handleLinkClick}>About</StyledLink>
+                <StyledLink to="projects" smooth={true} duration={500} onClick={handleLinkClick}>Projects</StyledLink>
+                <StyledLink to="contact" smooth={true} duration={500} onClick={handleLinkClick}>Contact</StyledLink>
             </MobileMenu>
         </>
     );
